@@ -1,8 +1,8 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="64.956235">
-<testsuite name="Hooks.spec.js" timestamp="2026-10-02T16:29:11.129Z" hostname="chromium" tests="2" failures="0" skipped="0" time="30.074" errors="1">
-<testcase name="Home Page Test" classname="Hooks.spec.js" time="0.065">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="63.984828">
+<testsuite name="Hooks.spec.js" timestamp="2026-10-03T12:30:53.711Z" hostname="chromium" tests="2" failures="0" skipped="0" time="30.1" errors="1">
+<testcase name="Home Page Test" classname="Hooks.spec.js" time="0.06">
 </testcase>
-<testcase name="Add product to cart test" classname="Hooks.spec.js" time="30.009">
+<testcase name="Add product to cart test" classname="Hooks.spec.js" time="30.04">
 <system-out>
 <![CDATA[
 [[ATTACHMENT|test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md]]
@@ -27,34 +27,12 @@
         at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:14:6
 
     Error: locator.click: Test ended.
-    Call log:
-      - waiting for locator('#logout2')
-        - locator resolved to <a href="#" id="logout2" class="nav-link" onclick="logOut()">Log out</a>
-      - attempting click action
-        2 × waiting for element to be visible, enabled and stable
-          - element is not visible
-        - retrying click action
-        - waiting 20ms
-        2 × waiting for element to be visible, enabled and stable
-          - element is not visible
-        - retrying click action
-          - waiting 100ms
-        56 × waiting for element to be visible, enabled and stable
-           - element is not visible
-         - retrying click action
-           - waiting 500ms
+    Browser logs:
 
-
-      13 |
-      14 | test.afterAll(async () => {
-    > 15 |   await page.locator("#logout2").click();
-         |                                  ^
-      16 | });
-      17 |
-      18 | test("Home Page Test", async () => {
-        at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:15:34
-
-    Error: locator.click: Test ended.
+    <launching> C:\Users\rohin\AppData\Local\ms-playwright\chromium_headless_shell-1243\chrome-headless-shell-win64\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\Users\rohin\AppData\Local\Temp\playwright_chromiumdev_profile-aUZT7T --remote-debugging-pipe --no-startup-window
+    <launched> pid=23504
+    [pid=23504][err] [1003/133056.034:INFO:CONSOLE:12] "VIDEOJS: WARN: A plugin named "reloadSourceOnError" already exists. You may want to avoid re-registering plugins!", source: https://www.demoblaze.com/node_modules/video.js/dist/video.min.js (12)
+    [pid=23504] <gracefully close start>
     Call log:
       - waiting for locator('//a[normalize-space()="Samsung galaxy s6"]')
         - locator resolved to <a class="hrefch" href="prod.html?idp_=1">Samsung galaxy s6</a>
@@ -132,6 +110,41 @@
       26 |
       27 |   page.on("dialog", async (dialog) => {
         at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:24:68
+
+    Error: locator.click: Test ended.
+    Browser logs:
+
+    <launching> C:\Users\rohin\AppData\Local\ms-playwright\chromium_headless_shell-1243\chrome-headless-shell-win64\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,Translate,AutoDeElevate,OptimizationHints,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\Users\rohin\AppData\Local\Temp\playwright_chromiumdev_profile-aUZT7T --remote-debugging-pipe --no-startup-window
+    <launched> pid=23504
+    [pid=23504][err] [1003/133056.034:INFO:CONSOLE:12] "VIDEOJS: WARN: A plugin named "reloadSourceOnError" already exists. You may want to avoid re-registering plugins!", source: https://www.demoblaze.com/node_modules/video.js/dist/video.min.js (12)
+    [pid=23504] <gracefully close start>
+    Call log:
+      - waiting for locator('#logout2')
+        - locator resolved to <a href="#" id="logout2" class="nav-link" onclick="logOut()">Log out</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        56 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      13 |
+      14 | test.afterAll(async () => {
+    > 15 |   await page.locator("#logout2").click();
+         |                                  ^
+      16 | });
+      17 |
+      18 | test("Home Page Test", async () => {
+        at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:15:34
 
     Error Context: ..\test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md
 
