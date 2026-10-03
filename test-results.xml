@@ -1,0 +1,143 @@
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="1" time="64.956235">
+<testsuite name="Hooks.spec.js" timestamp="2026-10-02T16:29:11.129Z" hostname="chromium" tests="2" failures="0" skipped="0" time="30.074" errors="1">
+<testcase name="Home Page Test" classname="Hooks.spec.js" time="0.065">
+</testcase>
+<testcase name="Add product to cart test" classname="Hooks.spec.js" time="30.009">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Test timeout of 30000ms exceeded." type="Error">
+<![CDATA[  [chromium] › Hooks.spec.js:23:5 › Add product to cart test ───────────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    "afterAll" hook timeout of 30000ms exceeded.
+
+      12 | });
+      13 |
+    > 14 | test.afterAll(async () => {
+         |      ^
+      15 |   await page.locator("#logout2").click();
+      16 | });
+      17 |
+        at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:14:6
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for locator('#logout2')
+        - locator resolved to <a href="#" id="logout2" class="nav-link" onclick="logOut()">Log out</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is not visible
+        - retrying click action
+          - waiting 100ms
+        56 × waiting for element to be visible, enabled and stable
+           - element is not visible
+         - retrying click action
+           - waiting 500ms
+
+
+      13 |
+      14 | test.afterAll(async () => {
+    > 15 |   await page.locator("#logout2").click();
+         |                                  ^
+      16 | });
+      17 |
+      18 | test("Home Page Test", async () => {
+        at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:15:34
+
+    Error: locator.click: Test ended.
+    Call log:
+      - waiting for locator('//a[normalize-space()="Samsung galaxy s6"]')
+        - locator resolved to <a class="hrefch" href="prod.html?idp_=1">Samsung galaxy s6</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+        - retrying click action
+        - waiting 20ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div class="modal-footer">…</div> from <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> subtree intercepts pointer events
+      2 × retrying click action
+          - waiting 100ms
+          - waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+      27 × retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div class="modal-footer">…</div> from <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> subtree intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+         - retrying click action
+           - waiting 500ms
+           - waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+        - element is visible, enabled and stable
+        - scrolling into view if needed
+        - done scrolling
+        - <div class="modal-footer">…</div> from <div tabindex="-1" role="dialog" id="logInModal" class="modal fade show" aria-labelledby="logInModalLabel">…</div> subtree intercepts pointer events
+      - retrying click action
+        - waiting 500ms
+
+
+      22 |
+      23 | test("Add product to cart test", async () => {
+    > 24 |   await page.locator('//a[normalize-space()="Samsung galaxy s6"]').click();
+         |                                                                    ^
+      25 |   await page.locator('//a[normalize-space()="Add to cart"]').click();
+      26 |
+      27 |   page.on("dialog", async (dialog) => {
+        at C:\Rohini\Playwright Framework\e2e\Hooks.spec.js:24:68
+
+    Error Context: ..\test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md
+
+    Error Context: ..\test-results\Hooks-Add-product-to-cart-test-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+</testsuites>
