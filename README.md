@@ -64,7 +64,7 @@ playwright-project/
 Clone the repository:
 
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git
+git clone https://github.com/Rohini-Gaikwad/Playwright_Project.git
 ```
 
 Navigate to the project:
@@ -245,7 +245,7 @@ The main goals of this project are to:
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Rohini Gaikwad**
 
 QA Analyst | Automation Tester | API Tester
 
