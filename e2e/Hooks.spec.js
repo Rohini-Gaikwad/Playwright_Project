@@ -3,7 +3,7 @@ require("dotenv").config();
 let page;
 test.beforeAll(async ({ browser }) => {
   page = await browser.newPage();
-  await page.goto("https://www.demoblaze.com/index.html");
+  await page.goto(`${process.env.HOST_NAME}/index.html`);
   //Login
   await page.locator("#login2").click();
   await page.locator("#loginusername").fill(process.env.TEST_USERNAME);
