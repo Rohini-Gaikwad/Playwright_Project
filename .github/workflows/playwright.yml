@@ -8,6 +8,14 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
+    env:
+      HOST_NAME: ${{ secrets.HOST_NAME }}
+      UI_HOST_NAME: ${{ secrets.UI_HOST_NAME }}
+      API_HOST_NAME: ${{ secrets.API_HOST_NAME }}
+      TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
+      TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
