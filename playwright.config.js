@@ -7,7 +7,7 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e",
   /* Run tests in files in parallel */
-  fullyParallel: false,
+  fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -17,9 +17,9 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ["list"],
-    ["html"],
-    ["junit", { outputFile: "test-results.xml" }],
-    ["json", { outputFile: "test-results.json" }],
+    ["html", { outputFolder: "playwright-report", open: "never" }],
+    ["junit", { outputFile: "playwright-report/test-results.xml" }],
+    ["json", { outputFile: "playwright-report/test-results.json" }],
   ],
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -29,8 +29,8 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on",
-    // screenshot: "on",
-    // video: "on",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
   },
 
   /* Configure projects for major browsers */
@@ -40,15 +40,15 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
+    },
 
     /* Test against mobile viewports. */
     // {
@@ -61,14 +61,14 @@ export default defineConfig({
     // },
 
     /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    {
+      name: "Microsoft Edge",
+      use: { ...devices["Desktop Edge"], channel: "msedge" },
+    },
+    {
+      name: "Google Chrome",
+      use: { ...devices["Desktop Chrome"], channel: "chrome" },
+    },
   ],
 
   /* Run your local dev server before starting the tests */
