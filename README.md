@@ -89,6 +89,9 @@ npx playwright install
 
 Run all tests:
 
+Viewing the trace
+npx playwright show-trace --file path
+
 ```bash
 npx playwright test
 ```
@@ -98,6 +101,8 @@ Run tests in headed mode:
 ```bash
 npx playwright test --headed
 ```
+Run test cases based upon tags
+npx playwright test e2e/Tags.spec.js --project chromium --headed --grep "@regression"
 
 Run a specific test:
 
