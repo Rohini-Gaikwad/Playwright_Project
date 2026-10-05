@@ -15,7 +15,13 @@ exports.HomePage = class HomePage {
       }
     }
     await this.page.on("dialog", async (dialog) => {
-      await dialog.accept();
+      if (dialog.message().includes("Product added")) {
+        await dialog.accept();
+      }
     });
+    await this.page.locator(this.addToCartbtn).click();
+  }
+  async gotoCart() {
+    await this.page.locator(this.cart).click();
   }
 };
