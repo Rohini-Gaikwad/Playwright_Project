@@ -24,6 +24,12 @@ jobs:
 
     - name: Print URL
       run: echo "HOST_NAME is $HOST_NAME"
+    - name: Check environment variables
+      run: |
+          echo "HOST_NAME configured: $([ -n "$HOST_NAME" ] && echo yes || echo no)"
+          echo "UI_HOST_NAME configured: $([ -n "$UI_HOST_NAME" ] && echo yes || echo no)"
+          echo "API_HOST_NAME configured: $([ -n "$API_HOST_NAME" ] && echo yes || echo no)"
+          echo "TEST_USERNAME configured: $([ -n "$TEST_USERNAME" ] && echo yes || echo no)"
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
