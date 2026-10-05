@@ -21,6 +21,9 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
+
+    - name: Print URL
+      run: echo "HOST_NAME is $HOST_NAME"
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
